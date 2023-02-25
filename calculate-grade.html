@@ -1,0 +1,43 @@
+<script>
+	/*
+		Algorithm : Steps to write program
+
+		steps :
+		1) Accept Marks from Student/User.(Store marks into variable) - Input
+		2) Calculate grade - Process
+		3) Print Grade - Output
+	*/
+
+	var marks, grade;
+
+
+	marks = 50; //step 1
+
+
+	if(marks>=90)//False
+	{
+		grade = 'A++';
+	}else if(marks>=80 && marks<90)
+	{
+		grade = 'A';
+	}else if(marks>=70 && marks<80)
+	{
+		grade = 'B++';
+	}else if(marks>=60 && marks<70)
+	{
+		grade = 'B';
+	}else if(marks>=50 && marks<60)//true
+	{
+		grade = 'C++';
+	}else if(marks>=35 && marks<50)
+	{
+		grade = 'C';
+	}else
+	{
+		grade = 'F';
+	}
+
+
+	document.write("You got grade "+grade);
+
+</script>
