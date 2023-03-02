@@ -1,0 +1,41 @@
+<script>
+	var date = 21;
+	var remainder = date%7;
+	var day = '';
+
+	switch(remainder)
+	{
+		case 0://remainder===0
+		day = "Tuesday";
+		break;
+
+		case 1://remainder===0
+		day = "Wednesday";
+		break;
+
+
+		case 2://remainder===0
+		day = "Thus";
+		break;
+
+
+		case 3://remainder===0
+			day = "Fri";
+		break;
+
+		case 4://remainder===0
+	day = "Sat";
+		break;
+
+		case 5://remainder===0
+		day = "Sun";
+		break;
+
+		case 6://remainder===0
+		day = "Mon";
+		break;
+	}
+
+
+	document.write("Day is "+day);
+</script>

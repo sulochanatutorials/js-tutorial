@@ -1,0 +1,30 @@
+<script>
+
+
+for(var hour = 1; hour<=24; hour++){
+	
+	for(var min = 1;min<=60;min++){
+
+		var ampm;
+
+		// ampm = hour<12 ? 'AM' :'PM' F
+
+		if(hour<12)
+		{
+			ampm = 'AM';	
+		}else{
+			ampm = 'PM';
+		}
+
+		var fhour = hour <10 ? '0'+hour  : hour;
+        var fmin = min <10 ? '0'+min  : min;
+
+
+		document.write("<br>" + fhour+':'+fmin+ampm);
+
+	}
+}
+
+</script>
+
+

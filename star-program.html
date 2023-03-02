@@ -1,0 +1,39 @@
+<!-- 	
+	*
+	* *
+	* * *
+	* * * *
+	* * * * * 
+
+
+
+	     *
+	    * *
+	   * * *
+	  * * * *
+	 * * * * * 
+-->
+
+<h3>
+	<script>
+
+for(var line = 1;line<=5;line++)
+{
+
+	var star_string = '';
+
+	for(var space = 5;space>=line; space--){
+       star_string += '&nbsp;&nbsp;';
+	}
+	for(var star = 1; star<=line;star++)
+	{
+		star_string = star_string + '* &nbsp;&nbsp;'; 
+	}
+	document.writeln("<br>"+star_string);
+
+}
+
+
+</script>
+
+</h3>
