@@ -1,0 +1,39 @@
+<script>
+	var colors = [
+		"Red", //  0
+		"Grefdfvgen",// 1
+		'blue',//  2
+		"Black",// 3
+		"Pink"//   4
+		//"Royal Blue",//5
+	];
+
+	//document.write("Values in array = "+ colors.length)	
+
+   // Add new value in array
+
+     colors[colors.length] = "Royal Blue";
+     colors[colors.length] = "Royal Green";
+     colors[colors.length] = "Royal Pink";
+
+	//document.write("<br>colors is " + colors[4]);
+
+
+
+	for(var index =0; index<colors.length; index++ )
+	{
+ 		document.write("<br>"+(index)+" colors is " + colors[index]);
+	}
+
+	document.write("<br><hr><br>");
+//Update Value
+     colors[1] = "Green";
+
+	for(var index =0; index<colors.length; index++ )
+	{
+ 		document.write("<br>"+(index)+" colors is " + colors[index]);
+	}
+
+
+
+</script>
