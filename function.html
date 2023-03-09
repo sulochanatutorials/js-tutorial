@@ -1,0 +1,56 @@
+<script>
+	/*
+		what is function in JS?
+		- Block of reusable code
+
+		What a function do ?
+		- Funcation takes some inputs - paramters
+		- Function do process on inputs - defination 
+		- Function return some output.
+
+
+		syntax : 
+
+		function functionName(parm1,param2.....)
+		{
+			//Block of Code
+
+			return output;
+		}
+	*/
+
+
+/*
+	Defination of Function
+*/
+	function calPercentage(a,b,c,d,e,f)
+	{
+		var totalObtainedMarks = a+b+c+d+e+f;
+		var totalOutOfMarks = 600;
+
+		var percentage = totalObtainedMarks/totalOutOfMarks * 100;
+
+		return percentage;
+	}	
+
+
+
+//Calling function
+var student1Percentage = calPercentage(78,45,69,34,56,89);
+document.write('<br>Student 1 got '+student1Percentage );
+
+var student2Percentage = calPercentage(98,85,76,72,73,45);
+document.write('<br>Student 2 got '+student2Percentage );
+
+
+
+// addiotion of two numbers - add(a,b)
+// mul of two numbers - mul(a,b)
+// sub of of two numbers - sub(a,b)
+// division of two numbers - div(a,b)
+
+//Given numbers is even - isEven(number) 
+
+
+
+</script>

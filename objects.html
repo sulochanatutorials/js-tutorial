@@ -1,0 +1,66 @@
+
+<script>
+	/*
+		What is Object ?
+		-  Collection of Properties & Methods
+		- Object is a instance of class.
+
+
+		Class & Object 
+		
+		Car - Class
+
+		Nano - Car
+
+
+
+		Student -  Class
+		tushar - object
+	*/
+
+
+
+function printStudentBio(student)
+{
+	document.write('<br><br>Hello, I am ' + student.name);
+	document.write('<br>My roll number is ' + student.rollNumber);
+	document.write('<br>My address is ' + student.address);
+	document.write('<br>I am studying in ' + student.class);
+}
+
+
+
+
+var students = [
+					{
+						name:"Tushar Gaikwad",
+						rollNumber : 25,
+						address : "CIDCO, Sambhaji Nagar",
+						city:'Sambhaji Nagar',
+						class:'BCS SY'
+					},
+					{
+						name:"Ramesh Gaikwad",
+						rollNumber : 36,
+						address : "CIDCO, Sambhaji Nagar",
+						city:'Sambhaji Nagar',
+						class:'BCS SY'
+					}
+					,
+					{
+						name:"Suresh Gaikwad",
+						rollNumber : 42,
+						address : "CIDCO, Sambhaji Nagar",
+						city:'Sambhaji Nagar',
+						class:'BCS SY'
+					}
+				];
+
+students[0].rollNumber = 36;
+
+for (var i = 0; i<students.length;i++) {
+	printStudentBio(students[i]);
+}
+
+
+</script>
