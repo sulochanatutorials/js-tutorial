@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for=""> Student Name </label>
+      <input type="text" id="student_name" /> <br /><br />
+
+      <label for=""> Roll No </label>
+      <input type="number" id="roll_no" /> <br /><br />
+
+      <label for=""> Marks </label>
+      <input type="number" id="marks" /> <br /><br />
+
+      <button type="button" onclick="addStudent();">Add STudent</button>
+    </form>
+
+    <h3>STudents List</h3>
+
+    <table border="1" cellspacing="0" cellpadding="5px">
+      <thead>
+        <tr>
+          <th>STudent Name</th>
+          <th>Roll No</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+
+    
+    </table>
+    <script>
+      var students = [
+        {
+          name: "Ganesh",
+          roll_number: 25,
+          marks: 100,
+        },
+        {
+          name: "Ramesh",
+          roll_number: 26,
+          marks: 80,
+        },
+      ];
+      function addStudent() {
+        var student_name = document.getElementById("student_name").value;
+        var roll_no = document.getElementById("roll_no").value;
+        var marks = document.getElementById("marks").value;
+
+        // alert(student_name);
+        // alert(roll_no);
+        // alert(marks);
+      }
+    </script>
+  </body>
+</html>

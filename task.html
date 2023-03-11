@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task</title>
+  </head>
+  <body>
+    <label for="">Enter any message</label>
+    <input type="text" id="message" oninput="printMessage()" />
+    <!-- <button type="button" onclick="printMessage()">Print Message</button> -->
+
+    <p id="board">Message will be here</p>
+
+    <script>
+      function printMessage() {
+        var message = document.getElementById("message").value;
+        // alert(message);
+        document.getElementById("board").innerHTML = message;
+      }
+    </script>
+  </body>
+</html>
