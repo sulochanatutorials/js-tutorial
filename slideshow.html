@@ -23,6 +23,7 @@
       <div class="controls">
         <button type="button" onclick="backImage();">Previous</button>
         <p id="title"></p>
+        <button type="button" onclick="stopSlideshow()">Stop</button>
         <button type="button" onclick="nextImage()">Next</button>
       </div>
 
@@ -36,6 +37,8 @@
         var index = 0;
 
         var path = "images/slides/";
+
+        var interval = null;
 
         function backImage() {
           index--;
@@ -59,8 +62,12 @@
 
         function pageLoaded() {
           //1000 - milisecond
-          setInterval(nextImage, 2000);
+          interval = setInterval(nextImage, 2000);
           setInterval(setClockTime, 1000);
+        }
+
+        function stopSlideshow() {
+          clearInterval(interval);
         }
 
         function setClockTime() {
