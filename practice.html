@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+      integrity="sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      nav {
+        background: red;
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 2%;
+      }
+
+      #navicon {
+        display: none;
+      }
+      ul#links {
+        list-style: none;
+      }
+
+      ul#links li {
+        display: inline-block;
+      }
+      ul#links li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0px 20px;
+      }
+      h3 {
+        color: white;
+      }
+
+      @media screen and (max-width: 625px) {
+        nav {
+          display: block;
+          height: auto;
+        }
+        #navicon {
+          display: inline-block;
+          cursor: pointer;
+        }
+        #links {
+          display: none;
+        }
+
+        #links li {
+          display: block !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="nav">
+
+    </div> -->
+    <nav>
+      <h3>
+        <span
+          class="fa fa-navicon"
+          id="navicon"
+          onclick="toggleLinks();"
+        ></span>
+        My Website
+      </h3>
+      <ul id="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      function toggleLinks() {
+        var links = document.getElementById("links");
+
+        var display = links.style.display;
+
+        var linksVisible = links.style.display == "inline-block";
+        if (linksVisible) {
+          links.style.display = "none";
+        } else {
+          links.style.display = "inline-block";
+        }
+      }
+    </script>
+  </body>
+</html>
