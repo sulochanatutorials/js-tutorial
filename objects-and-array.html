@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid red;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid red;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body onload="pageLoaded()">
+    <input type="number" placeholder="Roll No" id="rollNo" />
+    <input type="text" placeholder="Student Name" id="studentName" />
+    <input type="text" placeholder="Class  Name" id="className" />
+    <br /><br />
+    <button type="button" onclick="addStudent()">Add Student</button>
+
+    <br />
+    <br />
+    <table>
+      <thead>
+        <tr>
+          <th>Roll No</th>
+          <th>Name of STudent</th>
+          <th>Class</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script>
+      var students = [];
+
+      function setStudentsdata() {
+        students = [
+          {
+            name: "Tushar",
+            className: "Bcs SY",
+            rollNo: 35,
+          },
+          {
+            name: "Akshay",
+            className: "Bcs SY",
+            rollNo: 45,
+          },
+          {
+            name: "Gaurav",
+            className: "Bcs SY",
+            rollNo: 25,
+          },
+          {
+            name: "Suman",
+            className: "Bcs SY",
+            rollNo: 2,
+          },
+          {
+            name: "5th Suman",
+            className: "Bcs SY",
+            rollNo: 26,
+          },
+        ];
+      }
+
+      function printStudentsData() {
+        setStudentsdata();
+
+        let tbody = document.getElementById("tbody");
+
+        let rows = getRowsString();
+        tbody.innerHTML = rows;
+      }
+
+      function getRowsString() {
+        var rows = ``;
+
+        for (let i = 0; i < students.length; i++) {
+          let student = students[i];
+          /*
+              {
+                name: "Suman",
+                className: "Bcs SY",
+                rollNo: 2,
+            }
+          */
+
+          rows =
+            rows +
+            ` <tr>
+              <td>${student.rollNo}</td>
+              <td>${student.name}</td>
+              <td>${student.className}</td>
+              </tr>`;
+
+          //   rows =
+          //     rows +
+          //     "<tr>" +
+          //     "<td>" +
+          //     student.rollNo +
+          //     "</td>" +
+          //     " <td>" +
+          //     student.name +
+          //     "</td>" +
+          //     "<td>" +
+          //     student.className +
+          //     "</td>" +
+          //     "</tr>";
+        }
+
+        return rows;
+      }
+
+      function pageLoaded() {
+        printStudentsData();
+      }
+
+      function addStudent() {
+        let studentName = document.getElementById("studentName").value;
+        let rollNo = document.getElementById("rollNo").value;
+        let className = document.getElementById("className").value;
+
+        let newStudent = {
+          name: studentName,
+          className: className,
+          rollNo: rollNo,
+        };
+
+        students[students.length] = newStudent;
+
+        printStudentsData();
+        alert(newStudent.name);
+      }
+    </script>
+  </body>
+</html>
